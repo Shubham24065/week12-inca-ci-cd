@@ -19,7 +19,7 @@ describe('login / logout flow specification', () => {
 
   it('successfully authenticates a valid github user: test-account and logs out', () => {
     cy.visit("/login")
-    .get('input[name="username"]').type("test-account").type("{enter}")
+    .get('input[name="username"]').type("Shubham24065").type("{enter}")
     .url().should('include', '/profile-sg')
     .get("nav").contains("Logout").click()
     .url().should('include', "/login");
